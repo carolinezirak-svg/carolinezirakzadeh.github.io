@@ -16,10 +16,10 @@
   nav .links a { font-size: 13px; color: #666; text-decoration: none; cursor: pointer; }
   nav .links a:hover { color: #1a1a1a; }
 
-  .hero { padding: 4.5rem 3rem 3.5rem; background: linear-gradient(135deg, #EEF4FB 0%, #F7F0FA 60%, #EAF3F7 100%); border-bottom: 0.5px solid #e5e5e5; }
-  .hero .eyebrow { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5B8FC2; margin-bottom: 1.25rem; font-weight: 500; }
-  .hero h1 { font-size: 34px; font-weight: 500; line-height: 1.2; margin-bottom: 1.25rem; max-width: 640px; }
-  .hero p { font-size: 15px; color: #555; line-height: 1.75; max-width: 560px; margin-bottom: 2rem; }
+  .hero { padding: 3.5rem 3rem; background: #ffffff; border: 2.5px solid #2B5EA7; margin: 1.5rem 2rem; border-radius: 16px; overflow: hidden; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B8FC2; margin-bottom: 1.25rem; font-weight: 500; }
+  .hero h1 { font-size: 42px; font-weight: 500; line-height: 1.15; margin-bottom: 1.25rem; max-width: 640px; }
+  .hero p { font-size: 17px; color: #555; line-height: 1.75; max-width: 560px; margin-bottom: 2rem; }
   .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary { padding: 10px 22px; font-size: 13px; font-weight: 500; background: #2B5EA7; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
   .btn-secondary { padding: 10px 22px; font-size: 13px; background: transparent; color: #1a1a1a; border: 0.5px solid #aaa; border-radius: 8px; cursor: pointer; }
@@ -79,6 +79,12 @@
 
   footer { padding: 1.75rem 3rem; border-top: 0.5px solid #e5e5e5; font-size: 13px; color: #888; }
 
+
+  .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .hero-text { flex: 1; min-width: 0; }
+  .hero-logo { flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-left: -1.5rem; margin-right: -1rem; overflow: hidden; border-left: none; }
+  .hero-logo img { width: 440px; height: auto; object-fit: contain; display: block; border: none; outline: none; }
+  @media (max-width: 700px) { .hero-inner { flex-direction: column; } .hero-logo { margin: 0; } .hero-logo img { width: 200px; } }
   @media (max-width: 600px) {
     nav { padding: 1rem 1.25rem; }
     nav .links { gap: 1rem; }
@@ -94,7 +100,6 @@
 
 <nav>
   <div class="logo-wrap">
-    <img src="logo.png" alt="Caroline Zirakzadeh logo" style="width:44px;height:44px;object-fit:contain;">
     <span class="logo-name">Caroline Zirakzadeh</span>
   </div>
   <div class="links">
@@ -107,16 +112,23 @@
 </nav>
 
 <div class="hero">
-  <div class="eyebrow">Non-Executive Board Member · Professor · Consultant / Advisor</div>
-  <h1>Strategy, leadership,<br>and the business of luxury.</h1>
-  <p>Former President and CEO of Swatch Group USA. Professor at IFM Business School and ESM Geneva. Independent board member and strategic advisor to executives navigating transformation and international growth.</p>
-  <div class="cta-row">
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
-    <button class="btn-secondary" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">View experience</button>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">Non-Executive Board Member · Professor · Consultant / Advisor</div>
+      <h1>Strategy, leadership, AI<br>and the business of luxury.</h1>
+      <p>Former President and CEO of Swatch Group USA. Professor at IFM Business School and ESM Geneva. Independent board member and strategic advisor to executives navigating transformation and international growth.</p>
+      <div class="cta-row">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
+        <button class="btn-secondary" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">View experience</button>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="logo.png" alt="Caroline Zirakzadeh logo">
+    </div>
   </div>
 </div>
 
-<hr class="divider">
+
 
 <section id="expertise">
   <div class="section-label">Areas of expertise</div>
